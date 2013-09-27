@@ -60,7 +60,6 @@ class RandCode(object):
 			data = self.__data_sign(data)
 			if data:
 				res = self.__request_data('post', data, self.RANDCODE_SENDSMS_API)
-				print(res)
 				json_data = json.loads(res)
 				if json_data['res_code'] == 0:
 					result = True
